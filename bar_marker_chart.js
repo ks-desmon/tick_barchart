@@ -82,7 +82,6 @@ var bar_marker_chart = function(widgetBody, data) {
     .cells(10)
     .title("Linear")
     .labelFormat(d3.format('.0f'))
-    //.orient('horizontal')
     .scale(linearV);
     svg.select(".legendV")
     .call(legendV);
@@ -93,7 +92,7 @@ var bar_marker_chart = function(widgetBody, data) {
         console.log(data)
         // scale the range of the data
         x.domain(data.map(function(d) {
-           // console.log(Object.keys(d[1])[1])
+      
             return d.name;
         }))
         y.domain([0, d3.max(data, function(d) {
